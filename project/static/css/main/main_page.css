@@ -1,1 +1,139 @@
 /* main page - CSS */
+
+.tag{
+    width: 1050px;
+    height: 218px;
+    padding-top: 50px;
+    display: flex;
+    margin:0 auto;
+}
+
+.Frame3 {
+    width: 1050px;
+    height: 168px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);    
+    gap: 20px;
+    border: 1px solid #E2E2E2;
+}
+
+.selection{
+    width: 100%;
+    height: 100%;
+    margin: 30px 40px;
+}
+
+.selection:hover {
+    color: #5E0080;
+}
+
+.selection.selected{
+    color: #5E0080;
+}
+
+.contents{
+    width: 1050px;
+    height: 100%;
+    gap: 40px;
+    margin:0 auto;
+    display: flex;
+    align-items: flex-start;
+}
+
+.filter{
+    width: 220px;
+    height: 203px;
+}
+
+.filter-head{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #E2E2E2;
+}
+
+.reset{
+    color: #E2E2E2;
+}
+
+
+.category{
+    padding: 15px 0px;
+}
+
+.category-head{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
+
+.cate-select{
+    display: flex;
+    font-size: 11px;
+    gap: 3px;
+    padding-bottom: 15px;
+}
+
+.item{
+    width: 783px;
+    height: 604px;
+}
+
+.sorting-bar{
+    display: flex;
+    justify-content: space-between;
+    height: 41px; 
+    padding-bottom: 20px;
+}
+
+.sorting-menu{
+    height: 41px;
+    gap:5px;
+    display: flex;
+    color: #999999;
+}
+
+.itemlist{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    row-gap: 30px;
+
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    width: 249px;
+    height: 507px;
+    gap: 6px;
+}
+
+.cart{
+    border: 1px solid #E2E2E2;
+    border-radius: 3px;
+    gap: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 249px;
+    height: 35px;
+}
+
+.details{
+    padding-top: 7px;
+    padding-right: 9px;
+}
+
+.details p{
+    padding: 4px 0;
+}
+
+.price{
+    width: 183px;
+    display: flex;
+    gap:8px;
+}
+

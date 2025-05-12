@@ -1,30 +1,118 @@
 {% extends 'base.html' %} {% block content %} {% load static %}
 <!-- css 파일 -->
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="{% static 'css/main/main_page.css'%}"
-/>
+<link rel="stylesheet" type="text/css" href="{% static 'css/main/main_page.css'%}" />
 
 <!-- 코드 작성시, 아래 부분(script 태그 이전)은 전체 삭제하고 작성하세요 -->
+
+<div class="tag">
+  <div class="Frame3">
+    <a class="selection" href="#">인기신상랭킹</a>
+    <a class="selection" href="#">입점특가</a>
+    <a class="selection" href="#">간편한끼</a>
+    <a class="selection" href="#">요즘간식</a>
+    <a class="selection" href="#">주방·리빙</a>
+    <a class="selection" href="#">뷰티</a>
+    <a class="selection" href="#">패션·잡화</a>
+    <a class="selection" href="#"></a>
+  </div>
+</div>
 
 <!----------------tip!---------------->
 <!-- 상품 데이터베이스는 프로젝트에 넣어뒀어요 -->
 <!-- 아래와 같은 형식으로 for문을 사용하여 작성하세요 -->
 
-<!-- 데이터 사용 예시 -->
-<div style="display: flex">
-  {% for product in products %}
-  <a href="product/{{product.id}}">
-    <img src="{{product.image_url}}" style="width: 100px" />
-    <p>{{product}}</p>
-    <p>{{product.description}}</p>
-    <p>{{product.origin_price}}원</p>
-    <p>{{product.discount_rate}}%</p>
-    <p>{{product.discount_price}}원</p>
-  </a>
-  {% endfor %}
+<div class="contents">
+
+  <div class="filter">
+    <div class="filter-head">
+      <p>필터</p>
+      <a class="reset">
+        <img src="{% static 'assets/icons/reset.svg' %}" style="width:18px">
+        초기화</a>
+    </div>
+
+    <div class="category">
+      <div class="category-head">
+        <p>카테고리</p>
+        <img src="{% static 'assets/icons/up.svg' %}" style="width:18px">
+      </div>
+
+      <div class="cate-select">
+        <input type="checkbox" name="category" value="skin">
+        <p>스킨케어·메이크업&nbsp;</p>
+        <p style="font-size: 8px;">68</p>
+      </div>
+
+      <div class="cate-select">
+        <input type="checkbox" name="category" value="skin">
+        <p>럭셔리뷰티&nbsp;</p>
+        <p style="font-size: 8px;">40</p>
+      </div>
+
+      <div class="cate-select">
+        <input type="checkbox" name="category" value="skin">
+        <p>간식·과자·떡&nbsp;</p>
+        <p style="font-size: 8px;">28</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="item">
+
+    <div class="sorting-bar">
+      <p>총 508건</p>
+      <div class="sorting-menu">
+        <p style="color: black;">추천순</p>
+        <p>|</p>
+        <p>신상품순</p>
+        <p>|</p>
+        <p>판매량순</p>
+        <p>|</p>
+        <p>낮은 가격순</p>
+        <p>|</p>
+        <p>높은 가격순</p>
+      </div>
+    </div>
+
+
+    <div class="itemlist">
+      {% for product in products %}
+      <a class="products" href="product/{{product.id}}">
+        <img src="{% static 'assets/img/item.jpg' %}" style="width: 249px; height: 320px;" />
+        <div class="cart">
+          <img src="{% static 'assets/icons/cart.svg' %}" style="width:18px">
+          <p>담기</p>
+        </div>
+        <div class="details">
+          <p style="color: #999999; 
+          font-size: 12px;">
+            샛별배송
+          </p>
+          <p style="font-size: 16px">{{product}}</p>
+          <p style="color: #999999;
+          font-size: 12px;">{{product.description}}</p>
+          <p style="font-size: 16px; color: #999999;"><del>{{product.origin_price}}원</del></p>
+          <div class="price">
+            <p style="color:#FA622F; font-size: 15px">{{product.discount_rate}}%</p>
+            <p style="font-size: 16px;">{{product.discount_price}}원</p>
+          </div>          
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+
+  </div>
+
+
+
+
 </div>
+
+
+<!-- 데이터 사용 예시 -->
+
 <!-- 데이터 사용 예시 -->
 
 <!-- js 파일 -->
