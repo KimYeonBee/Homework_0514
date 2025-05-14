@@ -6,7 +6,7 @@
 
 <div class="tag">
   <div class="Frame3">
-    <a class="selection" href="#">인기신상랭킹</a>
+    <a class="selection selected" href="#">인기신상랭킹</a>
     <a class="selection" href="#">입점특가</a>
     <a class="selection" href="#">간편한끼</a>
     <a class="selection" href="#">요즘간식</a>
@@ -40,19 +40,19 @@
       <div class="cate-select">
         <input type="checkbox" name="category" value="skin">
         <p>스킨케어·메이크업&nbsp;</p>
-        <p style="font-size: 8px;">68</p>
+        <p style="color: #E2E2E2; font-size: 8px;">68</p>
       </div>
 
       <div class="cate-select">
         <input type="checkbox" name="category" value="skin">
         <p>럭셔리뷰티&nbsp;</p>
-        <p style="font-size: 8px;">40</p>
+        <p style="color: #E2E2E2; font-size: 8px;">40</p>
       </div>
 
       <div class="cate-select">
         <input type="checkbox" name="category" value="skin">
         <p>간식·과자·떡&nbsp;</p>
-        <p style="font-size: 8px;">28</p>
+        <p style="color: #E2E2E2; font-size: 8px;">28</p>
       </div>
 
     </div>
@@ -80,28 +80,31 @@
     <div class="itemlist">
       {% for product in products %}
       <a class="products" href="product/{{product.id}}">
+        
         <img src="{% static 'assets/img/item.jpg' %}" style="width: 249px; height: 320px;" />
+        
         <div class="cart">
           <img src="{% static 'assets/icons/cart.svg' %}" style="width:18px">
           <p>담기</p>
         </div>
+        
         <div class="details">
-          <p style="color: #999999; 
-          font-size: 12px;">
-            샛별배송
-          </p>
-          <p style="font-size: 16px">{{product}}</p>
-          <p style="color: #999999;
-          font-size: 12px;">{{product.description}}</p>
+          <p style="color: #999999; font-size: 12px;">샛별배송</p>
+          <p style="font-size: 16px;">{{product}}</p>
+          <p style="color: #999999; font-size: 12px;">{{product.description}}</p>
           <p style="font-size: 16px; color: #999999;"><del>{{product.origin_price}}원</del></p>
+          
           <div class="price">
             <p style="color:#FA622F; font-size: 15px">{{product.discount_rate}}%</p>
             <p style="font-size: 16px;">{{product.discount_price}}원</p>
-          </div>          
+          </div>
         </div>
+    
       </a>
       {% endfor %}
     </div>
+    
+    
 
   </div>
 
