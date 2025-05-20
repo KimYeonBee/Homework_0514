@@ -24,9 +24,14 @@ plusBtn.addEventListener("click", () => {
 
 const price = document.getElementById("price-tag");
 const discountPrice = parseInt(price.dataset.discount);
+price.textContent = `${discountPrice.toLocaleString()}`;
+
+const totalprice_init = document.getElementById("totalPrice");
+const initPrice = parseInt(totalprice_init.textContent);
+totalprice_init.textContent = `${initPrice.toLocaleString()}`;
 
 function calculation(){
     const totalPrice = discountPrice * totalCount;
     const totalPrice1 = document.getElementById("totalPrice");
-    totalPrice1.textContent = `${totalPrice}원`;
+    totalPrice1.textContent = `${totalPrice.toLocaleString()}원`;
 }
