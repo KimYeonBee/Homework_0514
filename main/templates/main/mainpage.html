@@ -38,21 +38,21 @@
       </div>
 
       <div class="cate-select">
-        <input type="checkbox" name="category" value="skin">
-        <p>스킨케어·메이크업&nbsp;</p>
-        <p style="color: #E2E2E2; font-size: 8px;">68</p>
+        <input type="checkbox" name="category" value="skin" class="checkbox">
+        <p class="cateText">스킨케어·메이크업&nbsp;</p>
+        <p class="count" style="color: #E2E2E2; font-size: 8px;">68</p>
       </div>
 
       <div class="cate-select">
-        <input type="checkbox" name="category" value="skin">
-        <p>럭셔리뷰티&nbsp;</p>
-        <p style="color: #E2E2E2; font-size: 8px;">40</p>
+        <input type="checkbox" name="category" value="skin" class="checkbox">
+        <p class="cateText">럭셔리뷰티&nbsp;</p>
+        <p class="count" style="color: #E2E2E2; font-size: 8px;">40</p>
       </div>
 
       <div class="cate-select">
-        <input type="checkbox" name="category" value="skin">
-        <p>간식·과자·떡&nbsp;</p>
-        <p style="color: #E2E2E2; font-size: 8px;">28</p>
+        <input type="checkbox" name="category" value="skin" class="checkbox">
+        <p class="cateText">간식·과자·떡&nbsp;</p>
+        <p class="count" style="color: #E2E2E2; font-size: 8px;">28</p>
       </div>
 
     </div>
@@ -60,9 +60,8 @@
   </div>
 
   <div class="item">
-
     <div class="sorting-bar">
-      <p>총 508건</p>
+      <p id="totalCount">총 0건</p>
       <div class="sorting-menu">
         <p style="color: black;">추천순</p>
         <p>|</p>
@@ -76,6 +75,9 @@
       </div>
     </div>
 
+    <div class="cate-bar" id="cateBar">
+
+    </div>
 
     <div class="itemlist">
       {% for product in products %}

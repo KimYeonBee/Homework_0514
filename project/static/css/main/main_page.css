@@ -70,11 +70,16 @@
 }
 
 
-.cate-select {
+.cate-select{
     display: flex;
     font-size: 11px;
     gap: 3px;
     padding-bottom: 15px;
+}
+
+[type="checkbox"] {
+    accent-color: #999999;   
+    background-color: white;
 }
 
 .item {
@@ -93,7 +98,32 @@
     height: 41px;
     gap: 5px;
     display: flex;
-    color: #999999;
+    color: #999999;   
+}
+
+.cate-bar{
+    display: flex;
+    width: 783px;
+    height: 58px;
+    border: 1px solid #E2E2E2;
+    padding: 20px 16px 18px 16px;
+    gap: 16px;
+}
+
+
+.cate-head-item{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin: 0;
+    gap: 4px;
+}
+
+.cate-head-text {
+    margin: 0;
+    font-size: 14px;
+    color: #5E0080;
+    display: flex;
 }
 
 .itemlist {
@@ -101,6 +131,7 @@
     grid-template-columns: repeat(3, 1fr);
     /* ← 딱 3개씩 고정 */
     gap: 30px;
+    padding-top: 32px;
 }
 
 .products {

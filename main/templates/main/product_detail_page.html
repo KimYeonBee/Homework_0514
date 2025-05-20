@@ -19,7 +19,7 @@
         <div class="name">{{product.name}}</div>
         <div class="price">
           <p style="font-size: 28px; color: #FA622F; font-weight: 600;">{{product.discount_rate}}%</p>
-          <p style="font-size: 28px; font-weight: 600;">{{product.discount_price}} 원</p>
+          <p id="price-tag" data-discount="{{product.discount_price}}" style="font-size: 28px; font-weight: 600;">{{product.discount_price}} 원</p>
         </div>
         <hr>
         <div class="not">
@@ -32,9 +32,9 @@
           <div class="order-box">
             <p style=" color: #999999;">[선물세트]종합비타민</p>
             <div class="num">
-              <p>-</p>
-              <p>2</p>
-              <p>+</p>
+              <p id="minus">-</p>
+              <p id="totalCount">1</p>
+              <p id="plus">+</p>
             </div>
           </div>
         </div>
@@ -45,7 +45,7 @@
       <div class="purchase">
         <div class="total-price">
           <p style="font-size: 14px; font-weight: 400;">총 상품 금액:&nbsp;</p>
-          <p style="font-size: 28px; font-weight: 600;">33800 원</p>
+          <p id="totalPrice" style="font-size: 28px; font-weight: 600;">{{product.discount_price}} 원</p>
         </div>
 
         <div class="login">
