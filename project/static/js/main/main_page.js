@@ -103,3 +103,31 @@ function updateTotalCount() {
     const totalTextEl = document.getElementById("totalCount");
     totalTextEl.textContent = `총 ${total || 0}건`;
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const origin_prices = document.querySelectorAll(".origin_price");
+
+    origin_prices.forEach((el) => {
+        const origin = el.dataset.origin;
+        const origininit = parseInt(origin);
+
+        if (!isNaN(origininit)) {
+            el.innerHTML = `<del>${origininit.toLocaleString()}원</del>`;
+        } else {
+            console.warn("숫자 아님:", origin);
+        }
+    });
+
+    const final_prices = document.querySelectorAll(".final_price");
+
+    final_prices.forEach((el) => {
+        const final = el.dataset.final;
+        const fianlinit = parseInt(final);
+
+        if (!isNaN(fianlinit)) {
+            el.innerHTML = `${fianlinit.toLocaleString()}원`;
+        } else {
+            console.warn("숫자 아님:", final);
+        }
+    });
+});

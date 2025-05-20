@@ -94,11 +94,11 @@
           <p style="color: #999999; font-size: 12px;">샛별배송</p>
           <p style="font-size: 16px;">{{product}}</p>
           <p style="color: #999999; font-size: 12px;">{{product.description}}</p>
-          <p style="font-size: 16px; color: #999999;"><del>{{product.origin_price}}원</del></p>
+          <p class="origin_price" data-origin="{{product.origin_price}}" style="font-size: 16px; color: #999999;"><del>{{product.origin_price}}원</del></p>
           
           <div class="price">
             <p style="color:#FA622F; font-size: 15px">{{product.discount_rate}}%</p>
-            <p style="font-size: 16px;">{{product.discount_price}}원</p>
+            <p class="final_price" data-final="{{product.discount_price}}" style="font-size: 16px;">{{product.discount_price}}원</p>
           </div>
         </div>
     
